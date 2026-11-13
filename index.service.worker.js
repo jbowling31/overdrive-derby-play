@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1794574133|3513132';
+const CACHE_VERSION = '1794583104|3291417';
 /** @type {string} */
 const CACHE_PREFIX = 'OVERDRIVE DERBY-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
