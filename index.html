@@ -97,8 +97,8 @@ body {
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Overdrive Derby">
-<style>html,body{background:#090f21;overscroll-behavior:none;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}#od-rotate{display:none;position:fixed;inset:0;z-index:9999;background:#090f21;color:#fff;font:700 22px system-ui,sans-serif;align-items:center;justify-content:center;flex-direction:column;text-align:center;gap:18px}#od-rotate b{font-size:64px;color:#3df2ff;text-shadow:0 0 18px #ff3cc8}@media (orientation:portrait) and (pointer:coarse){#od-rotate{display:flex}}</style>
-<script>document.addEventListener("DOMContentLoaded",function(){var d=document.createElement("div");d.id="od-rotate";d.innerHTML="<b>&#x21bb;</b>Turn your phone sideways<br>to play Overdrive Derby";document.body.appendChild(d);document.addEventListener("gesturestart",function(e){e.preventDefault()});});</script>
+<style>html,body{background:#090f21;overscroll-behavior:none;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}canvas{touch-action:none;-webkit-tap-highlight-color:transparent}#od-rotate{display:none;position:fixed;inset:0;z-index:9999;background:#090f21;color:#fff;font:700 22px system-ui,sans-serif;align-items:center;justify-content:center;flex-direction:column;text-align:center;gap:18px}#od-rotate b{font-size:64px;color:#3df2ff;text-shadow:0 0 18px #ff3cc8}@media (orientation:portrait) and (pointer:coarse){#od-rotate{display:flex}}</style>
+<script>document.addEventListener("DOMContentLoaded",function(){var d=document.createElement("div");d.id="od-rotate";d.innerHTML="<b>&#x21bb;</b>Turn your phone sideways<br>to play Overdrive Derby";document.body.appendChild(d);["gesturestart","gesturechange","gestureend"].forEach(function(n){document.addEventListener(n,function(e){e.preventDefault()},{passive:false})});document.addEventListener("touchmove",function(e){e.preventDefault()},{passive:false});document.addEventListener("dblclick",function(e){e.preventDefault()},{passive:false});});</script>
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -117,7 +117,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":false,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":27964188,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":false,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":27966012,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
